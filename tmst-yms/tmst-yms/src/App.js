@@ -21,6 +21,7 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
+// consturctor for validation
 class App extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +39,7 @@ class App extends Component {
       }
     };
   }
-
+// Preventing page from auto-submit
   handleSubmit = e => {
     e.preventDefault();
 
@@ -91,7 +92,7 @@ class App extends Component {
     return (
       <div className="wrapper">
         <div className="form-wrapper">
-          <h1>Create Account</h1>
+          <h1>TMST-YMS</h1>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
