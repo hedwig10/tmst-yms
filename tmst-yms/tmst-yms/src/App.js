@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
+import Navbar from '../src/components/NavBar';
+
+
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -23,6 +26,7 @@ const formValid = ({ formErrors, ...rest }) => {
 
 // consturctor for validation
 class App extends Component {
+
   constructor(props) {
     super(props);
 
@@ -39,7 +43,7 @@ class App extends Component {
       }
     };
   }
-// Preventing page from auto-submit
+  // Preventing page from auto-submit
   handleSubmit = e => {
     e.preventDefault();
 
@@ -89,8 +93,13 @@ class App extends Component {
   render() {
     const { formErrors } = this.state;
 
+
     return (
+     
+          
       <div className="wrapper">
+        <header>
+      <Navbar/></header>
         <div className="form-wrapper">
           <h1>TMST-YMS</h1>
           <form onSubmit={this.handleSubmit} noValidate>
@@ -150,15 +159,17 @@ class App extends Component {
                 <span className="errorMessage">{formErrors.password}</span>
               )}
             </div>
-            <div className="createAccount">
-              <button type="submit">Create Account</button>
-              <small>Already Have an Account?</small>
+            <div className="logIn">
+              <button type="submit">Log In</button>
+              <small>Forgot Password?</small>
             </div>
           </form>
         </div>
       </div>
+      
     );
   }
 }
 
 export default App;
+
