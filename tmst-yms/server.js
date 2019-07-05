@@ -29,7 +29,7 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
 //Serve static items when in production
-if {process.env.NODE_ENV === "production"} {
+if(process.env.NODE_ENV === "production") {
   //Set static folder
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
