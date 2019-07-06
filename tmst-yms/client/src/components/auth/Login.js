@@ -45,7 +45,7 @@ class Login extends Component {
         const { errors } = this.state;
         return (
             <div className="container">
-                <div style={{ marginTop: "4rem" }} className="row">
+                <div style={{ marginTop: "4rem"}} className="row">
                     <div className="col s8 offset-s2">
                         <Link to="/" className="btn-flat waves-effect">
                             <i className="material-icons left">keyboard_backspace</i> Back to
@@ -102,7 +102,7 @@ class Login extends Component {
                                         marginTop: "1rem"
                                     }}
                                     type="submit"
-                                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                                    className="btn btn-large waves-effect waves-light hoverable indigo darken-3"
                                 >
                                     Login
                 </button>

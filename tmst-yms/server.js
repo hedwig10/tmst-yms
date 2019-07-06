@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+const data = require("./routes/api/data");
 const app = express();
 const path = require("path");
 // Bodyparser middleware
@@ -28,6 +29,8 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
+app.user("/api/data", data);
+
 //Serve static items when in production
 if(process.env.NODE_ENV === "production") {
   //Set static folder
